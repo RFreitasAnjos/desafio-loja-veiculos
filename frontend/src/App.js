@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
+import Login from "./components/Login";
+import Perfil from "./components/Perfil";
+import Principal from "./components/Principal";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function Pagina404() {
+  return <h1 style={{"text-align": "center"}}>Erro 404 - Página não encontrada</h1>;
 }
 
-export default App;
+
+export default function App(){
+//<Route path="/principal" element={<Principal/>}/>
+    return (
+    <>
+    <header>
+    <Router>
+      <nav>
+        <Link to="/login">Login</Link> | <Link to="/perfil">Perfil</Link> | <Link to="/principal">Principal</Link>
+      </nav>
+      <Routes>
+        <Route path="/perfil" element={<Perfil />}/>
+        <Route path="/login" element={<Login />}/>
+        <Route path="*" element={<Pagina404 />}/>
+        <Route path="/principal" element={<Principal/>}/>
+      </Routes>
+    </Router>
+
+    </header>
+    </>
+    );
+};
