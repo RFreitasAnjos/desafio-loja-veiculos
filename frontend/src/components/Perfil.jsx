@@ -2,7 +2,6 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 
 export default function Perfil(){
-
     let dadosLogin = JSON.parse(sessionStorage.getItem('login')) || []; 
     const navigate = useNavigate();
 
@@ -29,7 +28,6 @@ export default function Perfil(){
     }
 
     return(
-
     <>
     <h1>usuario dados</h1>
 

@@ -6,7 +6,8 @@
     "cor": "Vermelho",
     "ano": 2021,
     "placa": "ABC1D23",
-    "preco": 58000.00
+    "preco": 58000.00,
+    "imagem":"https://s3.sa-east-1.amazonaws.com/revista.mobiauto/Fiat/Argo/Argo+Drive+1.0+-+Avalia%C3%A7%C3%A3o/Fiat_Argo_Drive_diantera.JPEG"
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "cor": "Branco",
     "ano": 2022,
     "placa": "XYZ9F87",
-    "preco": 72000.50
+    "preco": 72000.50,
+    "imagem":""
   },
   {
     "id": 3,
@@ -24,7 +26,8 @@
     "cor": "Prata",
     "ano": 2020,
     "placa": "JKL3H45",
-    "preco": 105000.00
+    "preco": 105000.00,
+    "imagem":""
   },
   {
     "id": 4,
@@ -33,7 +36,8 @@
     "cor": "Cinza",
     "ano": 2023,
     "placa": "MNO7G21",
-    "preco": 122000.00
+    "preco": 122000.00,
+    "imagem":""
   },
   {
     "id": 5,
@@ -42,7 +46,8 @@
     "cor": "Preto",
     "ano": 2019,
     "placa": "PQR5B67",
-    "preco": 48000.00
+    "preco": 48000.00,
+    "imagem":""
   },
   {
     "id": 6,
@@ -51,7 +56,8 @@
     "cor": "Azul",
     "ano": 2022,
     "placa": "DEF2K98",
-    "preco": 67000.00
+    "preco": 67000.00,
+    "imagem":""
   },
   {
     "id": 7,
@@ -60,7 +66,8 @@
     "cor": "Laranja",
     "ano": 2021,
     "placa": "GHI4M32",
-    "preco": 49500.00
+    "preco": 49500.00,
+    "imagem":""
   },
   {
     "id": 8,
@@ -69,7 +76,8 @@
     "cor": "Branco",
     "ano": 2023,
     "placa": "TUV8C54",
-    "preco": 99000.00
+    "preco": 99000.00,
+    "imagem":""
   },
   {
     "id": 9,
@@ -78,7 +86,8 @@
     "cor": "Verde Militar",
     "ano": 2022,
     "placa": "QWE3R21",
-    "preco": 115000.00
+    "preco": 115000.00,
+    "imagem":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH92JnQ-f8hrVlDlBBP-AbZqh0gc5g_g6MWg&s"
   },
   {
     "id": 10,
@@ -87,6 +96,7 @@
     "cor": "Prata",
     "ano": 2020,
     "placa": "LMN6U89",
-    "preco": 43000.00
+    "preco": 43000.00,
+    "imagem":"https://cdn.autopapo.com.br/box/uploads/2018/11/22195928/img_2882.jpg"
   }
 ]

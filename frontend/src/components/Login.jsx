@@ -7,7 +7,7 @@ export default function Login(){
       const [listaClientes, setListaClientes] = useState([]);
 
     useEffect(() => {
-    fetch('clientes.json')
+    fetch('./clientes.json')
       .then((res) => {
         return res.json();
       })
