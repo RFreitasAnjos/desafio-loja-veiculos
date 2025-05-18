@@ -1,23 +1,24 @@
 import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Perfil(){
     let dadosLogin = JSON.parse(sessionStorage.getItem('login')) || []; 
     const navigate = useNavigate();
 
-      let nome = "";
-      let email = "";
-      let senha = "";
-      let tipo = "";
+    const [email, setEmail] = useState('');
+    const [senha, setSenha] = useState('');
+    const [nome, setNome] = useState('');
+    const [tipo, setTipo] = useState('');
+
     useEffect(() => {
         if(dadosLogin == false){
       navigate('/login');
       alert("vc precisa estar logado");
     }else{
-      nome = dadosLogin[0].nome;
-      email = dadosLogin[0].email;
-      senha = dadosLogin[0].senha;
-      tipo = dadosLogin[0].tipoConta;
+      setTipo(dadosLogin[0].tipoConta);
+      setEmail(dadosLogin[0].email);
+      setSenha(dadosLogin[0].senha);
+      setNome(dadosLogin[0].nome);
     }
       }, []);
     
@@ -29,8 +30,11 @@ export default function Perfil(){
 
     return(
     <>
-    <h1>usuario dados</h1>
-
+    <div className='grid grid-cols-1'>
+      <div className=''>
+        <h1 className=''>usuario dados</h1>
+      </div>  
+      <div className=''>
         <p>nome: {nome}</p>
 
         <p>email: {email}</p>
@@ -38,8 +42,11 @@ export default function Perfil(){
         <p>senha : {senha}</p>
 
         <p>tipo da conta : {tipo}</p>
-
+      </div>
+      <div className=''>
         <button onClick={Deslogar}>deslogar</button>
+      </div>
+    </div>
     </>
     
     );

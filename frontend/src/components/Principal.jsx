@@ -3,19 +3,19 @@ import { useNavigate } from 'react-router-dom';
 
 export default function Principal(){
 
-    const [listaVeiculos, setListaVeiculos] = useState([]);
-    let dadosLogin = JSON.parse(sessionStorage.getItem('login')) || []; 
-    const navigate = useNavigate();
+  const [listaVeiculos, setListaVeiculos] = useState([]);
+  let dadosLogin = JSON.parse(sessionStorage.getItem('login')) || []; 
+  const navigate = useNavigate();
+  const [tipo, setTipo] = useState('');
 
-    let tipo = "";
-    useEffect(() => {
-    if(dadosLogin == false){
-      navigate('/login');
-      alert("Faça o login para ter acesso ao conteúdo.");
-    }else{
-      tipo = dadosLogin[0].tipoConta;
-    }
-  }, []);
+  useEffect(() => {
+  if(dadosLogin == false){
+    navigate('/login');
+    alert("Faça o login para ter acesso ao conteúdo.");
+  }else{
+    setTipo(dadosLogin[0].tipoConta);
+  }
+}, []);
 
     
     useEffect(() => {
@@ -41,9 +41,9 @@ export default function Principal(){
               <div><strong>Preço:</strong> R$ {veiculo.preco.toFixed(2)}</div>
               {tipo === "vendedor" && (
                 <>
-                  <div><strong>Preço PCD:</strong> R$ {(veiculo.preco * 0.8).toFixed(2)}</div>
-                  <div><strong>Preço Taxista:</strong> R$ {(veiculo.preco * 0.7).toFixed(2)}</div>
-                  <div><strong>Preço Cliente da Casa:</strong> R$ {(veiculo.preco * 0.6).toFixed(2)}</div>
+                <div><strong>Preço PCD:</strong> R$ {(veiculo.preco * 0.8).toFixed(2)}</div>
+                <div><strong>Preço Taxista:</strong> R$ {(veiculo.preco * 0.7).toFixed(2)}</div>
+                <div><strong>Preço Cliente da Casa:</strong> R$ {(veiculo.preco * 0.6).toFixed(2)}</div>
                 </>
               )}
             </p>
